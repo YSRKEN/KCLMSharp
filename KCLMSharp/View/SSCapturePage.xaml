@@ -1,0 +1,23 @@
+﻿<Page x:Class="KCLMSharp.View.SSCapturePage" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:local="clr-namespace:KCLMSharp.View"
+	mc:Ignorable="d" d:DesignHeight="400" d:DesignWidth="200" Title="SSCapturePage">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="30" />
+			<RowDefinition Height="24" />
+			<RowDefinition />
+		</Grid.RowDefinitions>
+		<ComboBox Grid.Row="0" ItemsSource="{Binding ModeList}" SelectedIndex="{Binding ModeIndex}" FontSize="15" SelectionChanged="ComboBox_SelectionChanged" />
+		<Grid Grid.Row="1">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition />
+				<ColumnDefinition />
+			</Grid.ColumnDefinitions>
+			<TextBlock Grid.Column="0" Text="キャプチャ座標" HorizontalAlignment="Center" VerticalAlignment="Center" />
+			<Button Grid.Column="1" Content="取得する" Command="{Binding ButtonCommand}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+		</Grid>
+	</Grid>
+</Page>
