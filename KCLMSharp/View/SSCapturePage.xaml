@@ -8,6 +8,13 @@
 		<Grid.RowDefinitions>
 			<RowDefinition Height="30" />
 			<RowDefinition Height="24" />
+			<RowDefinition Height="24" />
+			<RowDefinition Height="24" />
+			<RowDefinition Height="24" />
+			<RowDefinition Height="24" />
+			<RowDefinition Height="30" />
+			<RowDefinition Height="24" />
+			<RowDefinition Height="80" />
 			<RowDefinition />
 		</Grid.RowDefinitions>
 		<ComboBox Grid.Row="0" ItemsSource="{Binding ModeList}" SelectedIndex="{Binding ModeIndex}" FontSize="15" SelectionChanged="ComboBox_SelectionChanged" />
@@ -19,5 +26,40 @@
 			<TextBlock Grid.Column="0" Text="キャプチャ座標" HorizontalAlignment="Center" VerticalAlignment="Center" />
 			<Button Grid.Column="1" Content="取得する" Command="{Binding ButtonCommand}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
 		</Grid>
+		<Grid Grid.Row="2">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="auto"/>
+				<ColumnDefinition />
+				<ColumnDefinition Width="40"/>
+			</Grid.ColumnDefinitions>
+			<TextBlock Grid.Column="0" Text="最高追跡レベル" HorizontalAlignment="Center" VerticalAlignment="Center" />
+			<Slider Grid.Column="1" Minimum="0" Maximum="2" Interval="1" Value="2" TickPlacement="BottomRight" SmallChange="1" LargeChange="1" VerticalAlignment="Center"/>
+			<TextBlock Grid.Column="2" Text="S" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+		</Grid>
+		<CheckBox Grid.Row="3" Content="自動座標取得" VerticalAlignment="Center"/>
+		<CheckBox Grid.Row="4" Content="提督名と司令部Lvを隠す" VerticalAlignment="Center" />
+		<CheckBox Grid.Row="5" Content="ツイートウィンドウ表示" VerticalAlignment="Center" />
+		<Grid Grid.Row="6">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition />
+				<ColumnDefinition Width="20" />
+				<ColumnDefinition Width="20" />
+			</Grid.ColumnDefinitions>
+			<Button Grid.Column="0" Content="SSキャプチャ" />
+			<Button Grid.Column="1" Content="開" />
+			<Button Grid.Column="2" Content="↑" />
+		</Grid>
+		<Grid Grid.Row="7">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="120"/>
+				<ColumnDefinition />
+				<ColumnDefinition Width="20"/>
+			</Grid.ColumnDefinitions>
+			<TextBlock Grid.Column="0" Text="動画キャプチャ" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+			<Button Grid.Column="1" Content="開始" />
+			<Button Grid.Column="2" Content="開" />
+		</Grid>
+		<TextBox Grid.Row="8" AcceptsReturn="True" IsReadOnly="True"/>
+		<TextBox Grid.Row="9" AcceptsReturn="True" IsReadOnly="True" VerticalScrollBarVisibility="Visible"/>
 	</Grid>
 </Page>

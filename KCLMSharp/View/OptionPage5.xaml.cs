@@ -15,21 +15,23 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace KCLMSharp.View {
-	/// <summary>
-	/// OptionPage1.xaml の相互作用ロジック
-	/// </summary>
-	public partial class OptionPage1 : Page {
-		public OptionPage1() {
-			InitializeComponent();
-		}
+namespace KCLMSharp.View
+{
+    /// <summary>
+    /// OptionPage5.xaml の相互作用ロジック
+    /// </summary>
+    public partial class OptionPage5 : Page
+    {
+        public OptionPage5()
+        {
+            InitializeComponent();
+        }
 
 		private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e) {
 			var bindData = DataContext as MainViewModel;
-			if(bindData != null)
+			if (bindData != null)
 				NavigationService.Navigate(new Uri(bindData.ModeUri[bindData.ModeIndex], UriKind.Relative));
 		}
-
 		private void ComboBox2_SelectionChanged(object sender, SelectionChangedEventArgs e) {
 			var bindData = DataContext as MainViewModel;
 			if (bindData != null)
